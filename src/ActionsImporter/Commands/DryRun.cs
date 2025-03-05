@@ -26,6 +26,7 @@ public class DryRun : BaseCommand
         command.AddCommand(new GitLab.DryRun(_args).Command(app));
         command.AddCommand(new Jenkins.DryRun(_args).Command(app));
         command.AddCommand(new Travis.DryRun(_args).Command(app));
+        command.AddCommand(new Screwdriver.DryRun(_args).Command(app));
 
         return command;
     }

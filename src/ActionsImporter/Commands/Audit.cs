@@ -34,6 +34,7 @@ public class Audit : BaseCommand
         command.AddCommand(new GitLab.Audit(_args).Command(app));
         command.AddCommand(new Jenkins.Audit(_args).Command(app));
         command.AddCommand(new Travis.Audit(_args).Command(app));
+        command.AddCommand(new Screwdriver.Audit(_args).Command(app));
 
         return command;
     }
