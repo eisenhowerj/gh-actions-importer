@@ -48,6 +48,7 @@ public class Migrate : BaseCommand
         command.AddCommand(new GitLab.Migrate(_args).Command(app));
         command.AddCommand(new Jenkins.Migrate(_args).Command(app));
         command.AddCommand(new Travis.Migrate(_args).Command(app));
+        command.AddCommand(new Screwdriver.Migrate(_args).Command(app));
 
         return command;
     }

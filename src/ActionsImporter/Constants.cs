@@ -26,7 +26,10 @@ public static class Constants
         new Variable("TRAVIS_CI_INSTANCE_URL", Provider.TravisCI, "Base url of the Travis CI instance", "https://travis-ci.com"),
         new Variable("TRAVIS_CI_ORGANIZATION", Provider.TravisCI, "Travis CI organization name"),
         new Variable("BITBUCKET_ACCESS_TOKEN", Provider.Bitbucket, "Personal access token for Bitbucket"),
-
+        new Variable("SCREWDRIVER_ACCESS_TOKEN", Provider.Screwdriver, "Personal access token for Screwdriver"),
+        new Variable("SCREWDRIVER_INSTANCE_URL", Provider.Screwdriver, "Base url of the Screwdriver instance", "https://api.screwdriver.cd"),
+        new Variable("SCREWDRIVER_ORGANIZATION", Provider.Screwdriver, "Screwdriver organization name"),
+        new Variable("SCREWDRIVER_PIPELINE_ID", Provider.Screwdriver, "Screwdriver pipeline ID"),
     };
 
     public static List<string> ProviderNames => UserInputVariables.Where(v => v.Provider != Provider.GitHub).Select(v => v.ProviderName).Distinct().ToList();
